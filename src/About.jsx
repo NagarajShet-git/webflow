@@ -20,7 +20,7 @@ export const About = () => {
   <section class="section">
     <div class="w-layout-blockcontainer container padding-9rem w-container">
       <div class="space-page-top"></div>
-      <div data-w-id="77a23f5d-dc7c-c2f9-d18d-536935e52a2d" style={{opacity:0}} class="about-hero-flex">
+      <div data-w-id="77a23f5d-dc7c-c2f9-d18d-536935e52a2d" style={{opacity: 1}} class="about-hero-flex">
         <div class="about-hero-wrapper">
           <h5>Get To Know</h5>
           <div class="about-hero-block">

@@ -1,8 +1,16 @@
-import react from 'react'
+import react, {useEffect} from 'react'
 import { Header } from './Header'
 import { Footer } from './Footer'
 
+
 export const Main = () => {
+
+    useEffect(()=>{
+        window.Webflow && window.Webflow.destroy();
+        window.Webflow && window.Webflow.ready();
+        window.Webflow && window.Webflow.require('ix2').init();
+        document.dispatchEvent(new Event('readystatechange'))
+      })
     return (
         <>
             <div data-animation="default" className="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="06ab6c64-468c-b44e-1b8c-856deb96ba7f" role="banner" data-no-scroll="1" data-duration="400" data-doc-height="1">
@@ -75,7 +83,8 @@ export const Main = () => {
                             <h2 className="services-title">SERVICES</h2>
                             <div className="services-card">
                                 <div className="services-title-flex">
-                                    <div className="services-icon"><img sizes="(max-width: 991px) 80px, 6vw" srcSet="images/CreativeDesignStudioX-p-500.jpg 500w, images/CreativeDesignStudioX-p-800.jpg 800w, images/CreativeDesignStudioX-p-1080.jpg 1080w, images/CreativeDesignStudioX.jpg 1440w" alt="" src="images/CreativeDesignStudioX.jpg" loading="lazy" className="services-image" /></div>
+                                    <div className="services-icon">
+                                        <img sizes="(max-width: 991px) 80px, 6vw" srcSet="images/CreativeDesignStudioX-p-500.jpg 500w, images/CreativeDesignStudioX-p-800.jpg 800w, images/CreativeDesignStudioX-p-1080.jpg 1080w, images/CreativeDesignStudioX.jpg 1440w" alt="" src="images/CreativeDesignStudioX.jpg" loading="lazy" className="services-image"/></div>
                                     <h4 className="caps">Development</h4>
                                 </div>
                                 <div className="services-text-block">
