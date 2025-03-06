@@ -1,7 +1,13 @@
-import react from "react";
+import react, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
+  useEffect(()=>{
+          window.Webflow && window.Webflow.destroy();
+          window.Webflow && window.Webflow.ready();
+          window.Webflow && window.Webflow.require('ix2').init();
+          document.dispatchEvent(new Event('readystatechange'))
+        }, [])
   return (
     <>
       <div className="footer-right-flex">

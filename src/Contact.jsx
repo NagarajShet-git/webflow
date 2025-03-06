@@ -1,8 +1,14 @@
-import react from 'react'
+import react, { useEffect } from 'react'
 import { Header } from './Header'
 import { Footer } from './Footer'
 
 export const Contact = () => {
+  useEffect(()=>{
+            window.Webflow && window.Webflow.destroy();
+            window.Webflow && window.Webflow.ready();
+            window.Webflow && window.Webflow.require('ix2').init();
+            document.dispatchEvent(new Event('readystatechange'))
+      }, [])
     return (
         <>
         <div data-animation="default" className="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="06ab6c64-468c-b44e-1b8c-856deb96ba7f" role="banner" data-no-scroll="1" data-duration="400" data-doc-height="1">
@@ -28,13 +34,13 @@ export const Contact = () => {
     <div className="w-layout-blockcontainer container w-container">
       <div className="form-wrapper slide-up-animation w-form">
         <form id="email-form" name="email-form" data-name="Email Form" method="get" data-wf-page-id="67c413da5a0c70363e336841" data-wf-element-id="de33c4bd-5db8-0dd9-da14-921ce98adbf8">
-          <div className="field-wrapper"><label for="name" className="field-label">Name</label>
-          <input className="text-field w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="e. g. John Doe" type="text" id="name-3" /></div>
-          <div className="field-wrapper"><label for="email" className="field-label">Email Address</label>
-          <input className="text-field w-input" maxlength="256" name="email-3" data-name="Email 3" placeholder="e. g. johndoe@email.com" type="email" id="email-3" required="" /></div>
-          <div className="field-wrapper"><label for="Phone" className="field-label">Phone Number</label>
-          <input className="text-field w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="(123) - 456 - 789" type="tel" id="Phone"/></div>
-          <div className="field-wrapper"><label for="Message" className="field-label">Your Message</label><textarea id="Message" name="Message" maxlength="5000" data-name="Message" placeholder="Write Your Message Here" required="" className="message-area w-input"></textarea></div><input type="submit" data-wait="Please wait..." className="button w-button" value="Send Message"/>
+          <div className="field-wrapper"><label htmlFor="name" className="field-label">Name</label>
+          <input className="text-field w-input" maxLength="256" name="name-3" data-name="Name 3" placeholder="e. g. John Doe" type="text" id="name-3" /></div>
+          <div className="field-wrapper"><label htmlFor="email" className="field-label">Email Address</label>
+          <input className="text-field w-input" maxLength="256" name="email-3" data-name="Email 3" placeholder="e. g. johndoe@email.com" type="email" id="email-3" required="" /></div>
+          <div className="field-wrapper"><label htmlFor="Phone" className="field-label">Phone Number</label>
+          <input className="text-field w-input" maxLength="256" name="Phone" data-name="Phone" placeholder="(123) - 456 - 789" type="tel" id="Phone"/></div>
+          <div className="field-wrapper"><label htmlFor="Message" className="field-label">Your Message</label><textarea id="Message" name="Message" maxlength="5000" data-name="Message" placeholder="Write Your Message Here" required="" className="message-area w-input"></textarea></div><input type="submit" data-wait="Please wait..." className="button w-button" value="Send Message"/>
         </form>
         <div className="contact-success-message w-form-done">
           <div>Thank you! Your submission has been received!</div>

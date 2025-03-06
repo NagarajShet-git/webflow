@@ -1,8 +1,14 @@
-import react from 'react'
+import react, { useEffect } from 'react'
 import { Header } from './Header'
 import { Footer } from './Footer'
 
 export const Works = () => {
+    useEffect(()=>{
+                window.Webflow && window.Webflow.destroy();
+                window.Webflow && window.Webflow.ready();
+                window.Webflow && window.Webflow.require('ix2').init();
+                document.dispatchEvent(new Event('readystatechange'))
+          }, [])
     return (
         <>
             <div data-animation="default" className="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="06ab6c64-468c-b44e-1b8c-856deb96ba7f" role="banner" data-no-scroll="1" data-duration="400" data-doc-height="1">
@@ -18,8 +24,8 @@ export const Works = () => {
                 <div className="space-page-top"></div>
                 <div className="w-layout-blockcontainer container w-container">
                     <div className="title-flex">
-                        <h1 data-w-id="5160fc72-0309-958a-1d5a-f68bed0cd2c9" style={{opacity: 1}}>Works</h1>
-                        <h5 data-w-id="cd887da8-8603-0243-dc11-c5bb2ebc0096" style={{opacity: 1}} className="max-width-20rem">I offer innovative solutions that captivate customers, drive engagement and get results.</h5>
+                        <h1 data-w-id="5160fc72-0309-958a-1d5a-f68bed0cd2c9" style={{opacity: 0}}>Works</h1>
+                        <h5 data-w-id="cd887da8-8603-0243-dc11-c5bb2ebc0096" style={{opacity: 0}} className="max-width-20rem">I offer innovative solutions that captivate customers, drive engagement and get results.</h5>
                     </div>
                 </div>
             </section>

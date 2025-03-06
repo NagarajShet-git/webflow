@@ -65,8 +65,8 @@ export const DetailWork = () => {
                             <div role="listitem" className="w-dyn-item">
                                 <a href="#" data-w-id="359835b5-3b7f-5044-6d19-3e23fc095620" className="lightbox-link-small w-inline-block w-dyn-bind-empty w-lightbox"><img style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" loading="eager" alt="" src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" className="thumbnails w-dyn-bind-empty" />
                                     {/* <script type="application/json" className="w-json">{
-  "items": [],
-  "group": "Works Images"
+  items: [],
+  group: "Works Images"
 }</script> */}
                                 </a>
                             </div>

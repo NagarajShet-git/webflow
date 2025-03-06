@@ -11,8 +11,15 @@ import { ChangeLog } from './Utilities/ChangeLog';
 import { Instructions } from './Utilities/Instructions';
 import { Licenses } from './Utilities/Licenses';
 import { StyleGuide } from './Utilities/StyleGuide';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(()=>{
+          window.Webflow && window.Webflow.destroy();
+          window.Webflow && window.Webflow.ready();
+          window.Webflow && window.Webflow.require('ix2').init();
+          document.dispatchEvent(new Event('readystatechange'))
+    }, [])
   return (
     <BrowserRouter>
       <Routes>
